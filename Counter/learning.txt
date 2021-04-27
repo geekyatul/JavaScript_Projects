@@ -1,0 +1,30 @@
+querySelector("#value")
+const btns=document.querySelectorAll(".btn")
+
+querySelector will return the first element that contains the querySelector
+querySelectorAll will return all the elements that have selector value like .btns
+
+
+forEach is iterator for array it will take callback function and this 
+
+callback function take three argument current element ,index, array 
+current element is mandatory others are not 
+
+
+btns.forEach(function(btn){
+   btn.addEventListener("click",function(event){
+        const whichbtn=event.currentTarget.classList;
+        if(whichbtn.contains("decrease"))
+        {
+             count=count-1;
+             value.textContent=count;   
+        }
+   }
+}
+
+here btn is one of the element of array  
+btn.addEventListener we are applying the event listener that take callback function with event as argument 
+it means we are passing all the properites of current event means click event
+
+event have all properites ,we can differentiate each of btn   event.currentTarget.classList will give all the classes 
+that event contains ,now we can check here particular class is present if yes we are doing some actions.
